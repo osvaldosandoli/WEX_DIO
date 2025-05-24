@@ -9,7 +9,8 @@ Você foi contratado para construir um sistema para um estacionamento, que será
 
 <h2>Proposta</h2>
 Você precisará construir uma classe chamada "Estacionamento", conforme o diagrama abaixo: Diagrama de classe estacionamento
-![image](https://github.com/user-attachments/assets/ba8ed104-897f-4842-9256-a00b0cf27dd3)
+![image](https://github.com/user-attachments/assets/ae90ff42-4e0a-47b8-b968-78f4b7c5c3e3)
+
 
 
 A classe contém três variáveis, sendo:
@@ -30,9 +31,9 @@ ListarVeiculos: Lista todos os veículos presentes atualmente no estacionamento.
 
 Por último, deverá ser feito um menu interativo com as seguintes ações implementadas:
 
-  1- Cadastrar veículo
-  2- Remover veículo
-  3- Listar veículos
+  1- Cadastrar veículo </br>
+  2- Remover veículo </br>
+  3- Listar veículos </br>
   4- Encerrar
 <h2>Solução</h2>
 O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
