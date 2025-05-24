@@ -9,7 +9,7 @@ Você foi contratado para construir um sistema para um estacionamento, que será
 
 <h2>Proposta</h2>
 Você precisará construir uma classe chamada "Estacionamento", conforme o diagrama abaixo: Diagrama de classe estacionamento
-![image](https://github.com/user-attachments/assets/ae90ff42-4e0a-47b8-b968-78f4b7c5c3e3)
+![image]([https://github.com/user-attachments/assets/ae90ff42-4e0a-47b8-b968-78f4b7c5c3e3](https://github-production-user-asset-6210df.s3.amazonaws.com/74216841/447202349-ae90ff42-4e0a-47b8-b968-78f4b7c5c3e3.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250524%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250524T002443Z&X-Amz-Expires=300&X-Amz-Signature=5767d09f0ede9ada4545a2b6ff81a1445db0c2f6e1a724589defd2b9a44e1e5a&X-Amz-SignedHeaders=host))
 
 
 
