@@ -1,22 +1,37 @@
-# DIO - Trilha .NET - Programação orientada a objetos
-www.dio.me
+<H1> DIO - Trilha .NET - Fundamentos </H1>
+<a>www.dio.me</a>
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de orientação a objetos, da trilha .NET da DIO.
+<h2>Desafio de projeto</h2>
+Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de fundamentos, da trilha .NET da DIO.
 
-## Contexto
-Você é responsável por modelar um sistema que trabalha com celulares. Para isso, foi solicitado que você faça uma abstração de um celular e disponibilize maneiras de diferentes marcas e modelos terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos.
+<h2>Contexto</h2>
+Você foi contratado para construir um sistema para um estacionamento, que será usado para gerenciar os veículos estacionados e realizar suas operações, como por exemplo adicionar um veículo, remover um veículo (e exibir o valor cobrado durante o período) e listar os veículos.
 
-## Proposta
-Você precisa criar um sistema em .NET, do tipo console, mapeando uma classe abstrata e classes específicas para dois tipos de celulares: Nokia e iPhone. 
-Você deve criar as suas classes de acordo com o diagrama abaixo:
+<h2>Proposta</h2>
+Você precisará construir uma classe chamada "Estacionamento", conforme o diagrama abaixo: Diagrama de classe estacionamento
+![image](https://github.com/user-attachments/assets/36d5e424-06eb-4f9b-9c78-869c396c4e4b)
 
-![Diagrama classes](Imagens/diagrama.png)
+A classe contém três variáveis, sendo:
 
-## Regras e validações
-1. A classe **Smartphone** deve ser abstrata, não permitindo instanciar e servindo apenas como modelo.
-2. A classe **Nokia** e **Iphone** devem ser classes filhas de Smartphone.
-3. O método **InstalarAplicativo** deve ser sobrescrito na classe Nokia e iPhone, pois ambos possuem diferentes maneiras de instalar um aplicativo.
+precoInicial: Tipo decimal. É o preço cobrado para deixar seu veículo estacionado.
 
-## Solução
+precoPorHora: Tipo decimal. É o preço por hora que o veículo permanecer estacionado.
+
+veiculos: É uma lista de string, representando uma coleção de veículos estacionados. Contém apenas a placa do veículo.
+
+A classe contém três métodos, sendo:
+
+AdicionarVeiculo: Método responsável por receber uma placa digitada pelo usuário e guardar na variável veiculos.
+
+RemoverVeiculo: Método responsável por verificar se um determinado veículo está estacionado, e caso positivo, irá pedir a quantidade de horas que ele permaneceu no estacionamento. Após isso, realiza o seguinte cálculo: precoInicial * precoPorHora, exibindo para o usuário.
+
+ListarVeiculos: Lista todos os veículos presentes atualmente no estacionamento. Caso não haja nenhum, exibir a mensagem "Não há veículos estacionados".
+
+Por último, deverá ser feito um menu interativo com as seguintes ações implementadas:
+
+  1- Cadastrar veículo </br>
+  2- Remover veículo </br>
+  3- Listar veículos </br>
+  4- Encerrar
+<h2>Solução</h2>
 O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
