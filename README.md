@@ -4,13 +4,13 @@
 <p> Neste projeto o expert utilizou o Docker Compose para executar uma aplicação HTML em um Container Apache. Você poderá ir além e fazer alterações mais robustas ao seu projeto, estilizando sua página e utilizando seus conhecimentos em (HTML, CSS e JS). Você também pode buscar outras formas para executar seu arquivo HTML em outras Linguagens de Programação. </p>
 
 <h1> PASSO A PASSO: </h1>
--    Criar um arquivo YML com as definições de um servidor Apache (httpd);
--    Especificar no arquivo YML o local onde os arquivos da aplicação estarão. A aplicação pode ser um simples Hello World. Será que você consegue executar uma aplicação web completa?
--    Subir o arquivo YML e a aplicação para um repositório no GitHub.
--    Agora é a sua vez de ser o protagonista! Implemente o desafio sugerido pelo expert e suba seu projeto para um repositório próprio, com isso, você aumentará ainda mais seu portfólio de projetos no GitHub!
+-    Criar um arquivo YML com as definições de um servidor Apache (httpd); </br>
+-    Especificar no arquivo YML o local onde os arquivos da aplicação estarão. A aplicação pode ser um simples Hello World. Será que você consegue executar uma aplicação web completa? </br>
+-    Subir o arquivo YML e a aplicação para um repositório no GitHub. </br>
+-    Agora é a sua vez de ser o protagonista! Implemente o desafio sugerido pelo expert e suba seu projeto para um repositório próprio, com isso, você aumentará ainda mais seu portfólio de projetos no GitHub! </br>
 
 <h1> Pré-requisitos: </h1>
--    Conhecimento Básico em Docker(Docker Compose);
--    Conhecimento Básico em Apache;
--    Conhecimento Básico em HTML;
--    Computador com SO de sua preferência(Windows, Linux, Mac OS);
+-    Conhecimento Básico em Docker(Docker Compose); </br>
+-    Conhecimento Básico em Apache; </br>
+-    Conhecimento Básico em HTML; </br>
+-    Computador com SO de sua preferência(Windows, Linux, Mac OS); 
