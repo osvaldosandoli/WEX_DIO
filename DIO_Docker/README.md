@@ -40,5 +40,3 @@ Este guia reúne os comandos Docker e Docker Compose mais usados no cotidiano de
 ---
 
 📘 Para mais dicas, veja a [documentação oficial](https://docs.docker.com/). E se quiser, posso transformar isso num arquivo pronto pra você clonar, usar ou até estilizar com emojis extras ou instruções específicas por ambiente (como Linux ou Windows).
-
-Me avisa que eu preparo rapidinho! 😉🐳📄  
