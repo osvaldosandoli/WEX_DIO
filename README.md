@@ -1,38 +1,16 @@
-# Repositorio contendo os Desafios desenvolvidos no Curso WEX - End to End Engineering
+# Docker DIO
 
-<h2> Projeto Conteme as seguintes Branches com seus respectivos projetos: </h2>
+<h1> Descrição: </h1>
+<p> Neste projeto o expert utilizou o Docker Compose para executar uma aplicação HTML em um Container Apache. Você poderá ir além e fazer alterações mais robustas ao seu projeto, estilizando sua página e utilizando seus conhecimentos em (HTML, CSS e JS). Você também pode buscar outras formas para executar seu arquivo HTML em outras Linguagens de Programação. </p>
 
-<h1> Estacionamento - Sistema de gerenciamento de um estacionamento por terminal </h1>
-<p> Assuntos abordados:</br>
--Models </br>
--Fundamentos C# </br>
--Switch </br>
--Gerenciamento de Listas</br>
-</p>
+<h1> PASSO A PASSO: </h1>
+-    Criar um arquivo YML com as definições de um servidor Apache (httpd);
+-    Especificar no arquivo YML o local onde os arquivos da aplicação estarão. A aplicação pode ser um simples Hello World. Será que você consegue executar uma aplicação web completa?
+-    Subir o arquivo YML e a aplicação para um repositório no GitHub.
+-    Agora é a sua vez de ser o protagonista! Implemente o desafio sugerido pelo expert e suba seu projeto para um repositório próprio, com isso, você aumentará ainda mais seu portfólio de projetos no GitHub!
 
-<h1> Hotel - Sistema de gerenciamento de um reservas por terminal </h1>
-<p> Assuntos abordados: </br>
--Models </br>
--Requisitos Funcionais</br> 
--Listas (List)</br> 
--Exceções (Try/Catch, Throw) </br>
-</p>
-
-<h1> Smatphone - Sistema de Celular com pilares de POO </h1>
-<p> Assuntos abordados:</br>
--Models</br>
--POO</br>
--Herança</br>
--Polimorfismo</br>
--Classes Abstratas</br>
--Atributos privados</br>
-</p>
-
-<h1> SQL - Desafio SQL resolvendo as questões com o desenvolvimento de Queries no SQL SERVER </h1>
-<p> Assuntos abordados:</br>
--CRUD</br>
--COUNT</br>
--JOINS</br>
--GROUP BY</br>
--ORDER BY</br>
-</p>
+<h1> Pré-requisitos: </h1>
+-    Conhecimento Básico em Docker(Docker Compose);
+-    Conhecimento Básico em Apache;
+-    Conhecimento Básico em HTML;
+-    Computador com SO de sua preferência(Windows, Linux, Mac OS);
