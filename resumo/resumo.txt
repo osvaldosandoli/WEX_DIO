@@ -1,0 +1,293 @@
+1.0 - Como a Computação em Nuvem Funciona
+1.1 - On-Primese > Infraestrutura de TI mantida fisicamente dentro da empresa. A organização é responsável por todo o hardware, software, segurança e manutenção (Sem utilização de Cloud).
+
+1.2 - As a Service > Servidores totalmente alocados na Cloud (Usando quando não tem espaço físico para alocar servidores ou quer reduzir custos)
+Exemplos de Serviços:
+1.3 - IaaS (Infraestrutura como Serviço): você aluga servidores, redes e armazenamento. Ex: AWS EC2;
+1.4 - PaaS (Plataforma como Serviço): você foca no código e a plataforma cuida do resto. Ex: AWS Elastic Beanstalk;
+1.5 - SaaS (Software como Serviço): você usa o software pronto. Ex: Gmail, Office 365.
+
+1.6 - Hybrid > servidores locais e em cloud (usados sando periodicamente voce precisa de mais processamento, como exemplo chegada da black friday);
+
+1.7 - Nos pagamentos de cloud você paga o que consumiu no fim do mês, podendo ser variável pela quantidade de processamento (CPU, memória, armazenamento) e valorização do preço da moeda.
+
+1.8 - Iaas (Infra as a Service) - Empresas que vendem o serviço de emprestar os servidores Ex. AWS, Azure, ...
+
+------------------------------------------------------
+2.0 - Infraestrutura Global AWS:
+2.1 - A AWS possui regiões geográficas compostas por múltiplas zonas de disponibilidade (AZs). Se uma AZ falhar, outra assume automaticamente. Isso garante alta disponibilidade e tolerância a falhas.
+Como exemplo se contratado no Brasil um serviço AWS automaticamente o datacenter mais proximo é no proprio Brasil que possui a menor latência possível do que em outro dc, caso de algum problema em que force ao dc do Brasil a parar o seu serviço automaticamente ira redirecionar os clientes do Brasil para o dc mais proximo na America no Norte, com isso ira aumentar a latência, porem não ira interromper os serviços de rodarem.
+
+2.2 - CDN (Ponto de presença) - O Amazon CloudFront é a CDN da AWS. Ele armazena conteúdos em cache em pontos de presença distribuídos globalmente, reduzindo a latência e melhorando a performance.
+Exemplo se um cliente no Brasil executa algum serviço na Europa, caso existir algum datacenter mais proximo do que a rota entre Brasil e Europa ira armazenar no mais proximo, para se executar na próxima vez a mesma requisição ira conseguir puxar do cache reduzindo o tempo.
+
+2.3 - Como podemos acessar os serviços da AWS ?
+2.3.1 - Console de gerenciamento > Acessar via portal na WEB;
+2.3.2 - AWS CLI > Via linha de comando precisa ser instalado localmente na sua maquina e opera com APIs da AWS por linha de comando;
+2.3.3 - SDKs > Acesso as APIs da AWS pelo SDK, é mais uma forma de automatização de conceção com o serviços de AWS.
+
+2.4 - Provisionando infraestrutura:
+2.4.1 - Elastic Beanstalk > Automatiza processos de deploy;
+2.4.2- CloudFormation  > Automatiza processos de construção de ambientes em AWS por meio de arquivos JSON e YAML.
+----------------------------------------------------
+3.0 - Computação em AWS
+3.1 - Instâncias EC2 (Elastic Compute Cloud):
+Servidores virtuais na nuvem da AWS usados para hospedar aplicações, sites, bancos de dados e outros serviços.
+Você escolhe o sistema operacional, quantidade de CPU, memória, disco e tipo de rede.
+Processo para usar → Escolher uma AMI (imagem) > Selecionar tipo da instância (recursos) > Configurar rede e armazenamento > Iniciar instância.
+Você pode parar, iniciar e terminar a instância quando quiser.
+Pagamentos baseados em uso (tempo ativo e tipo de instância).
+
+3.2 - Tipos de instância (principais famílias):
+Uso geral (Ex: t4g, m6i): Boa para aplicações web, testes e desenvolvimento;
+Alta performance de CPU (Ex: c6i, c7g): Indicada para processamento intenso, cálculos e games;
+Alta performance de memória (Ex: r6g, x2idn): Ideal para bancos de dados e aplicações em memória;
+Alta performance de disco (Ex: i4i, d3en): Boa para grandes volumes de dados ou aplicações de análise;
+Instâncias com GPU (Ex: p4, g5): Usadas para IA, machine learning e gráficos;
+Instâncias Mac (Ex: mac1.metal): Voltadas para desenvolvimento iOS/macOS.
+
+3.3 - Modelos de compra:
+Sob demanda: Você paga pelo tempo que usa, sem compromisso;
+Reservadas: Contrato de longo prazo com desconto (1 ou 3 anos);
+Spot: Uso de capacidade ociosa da AWS com até 90% de desconto (podem ser interrompidas);
+Savings Plans: Compromisso de uso com desconto flexível sobre diferentes tipos de instância.
+
+3.4 - EC2 - Elastic Compute Cloud: 
+Capacidade computacional segura e redimensionável;
+Computação: CPU, Memoria, Rede, Armazenamento, Sistema Operacional;
+Definição de preço conforme uso variando pela sua necessidade;
+Instâncias com tipos otimizados
+
+3.5 - Amazon EC2 AutoScalling:
+Prove escalabilidade horizontal para seus serviços;
+Melhora a tolerância a falhas com identificação de instancias indisponíveis e implantação multi-AZ;
+Melhor gerenciamento de custos
+
+3.6 - ELB - Elastic Load Balancing:
+Descrição - Balanceamento de Carga para identificar para qual EC2 ira enviar aquela instancia
+
+3.7 - Balanceamento de carga de aplicação, gateway e rede;
+Escopo regional; Escala de forma automática, sem custos;
+Junto ao EC2 AutoScaling permite criar aplicações altamente disponíveis
+
+3.8 - Tipos de ELB:
+Application Load Balancer (HTTP/HTTPS);
+Network Load Balancer (TCP/UDP);
+Gateway Load Balancer (para appliances de terceiros).
+
+
+3.9 - Serviços de mensageria:
+3.9.1 - SQS - Amazon Simple Queue Service:
+Sistema de enfileiramento de mensagens (fila);
+Um usuário envia a mensagem para a fila, o sistema lê e processa e exclui da fila.
+
+3.9.2 -SNS - Amazon Simple Notification Service:
+Sistema pub/sub;
+Utiliza tópicos como estrutura;
+Usuário publica mensagens no tópico e assinantes escutam;
+*Assinantes são serviços ou processos que tem relação ao tópico
+
+3.10 - Computação sem servidor:
+Quando você esta executando no servidor, porem sem se preocupar com as configurações como memória, CPU, armazenamento isso é feito automaticamente.
+3.10.1 -Serviços que fazem isso:
+3.10.2 - AWS Lambda:
+Processos para usar -> Upload do seu código para o AWS Lambda ou escrever o Lamdba no seu código > configurar a trigger que ira acionar o código > Ao acionar o gatilho serviço é executado automaticamente > Pagamento sobre o que foi utilizado pelo seu processamento e tempo de execução.
+
+Execução de código sem provisionar servidores;
+Código organizado em funções;
+Você pode escolher a linguagem de programação de sua preferencia;
+Executa a partir de eventos ou chamadas diretas a API do Lambda
+
+3.11 - O que são container ?
+Forma padrão de empacotar seu aplicativo em um único objeto;
+Executados como processos isolados;
+Docker
+
+3.12 - Containers em AWS:
+3.12.1 - ECR - Elastic Container Registy:
+Repositório gerenciado para imagens de containers.
+Processos para usar → Criar repositório > Fazer upload (push) da imagem > Referenciar no ECS ou EKS > Integra com IAM e tem suporte a versionamento e políticas de ciclo de vida.
+Armazenamento seguro e eficiente das imagens de container
+
+3.12.2 - ECS - Elastic Container Service:
+Orquestração de containers com baixo nível de complexidade.
+Processos para usar → Criar cluster > Definir tarefa (imagem + definições de execução) > Criar serviço > Executar com EC2 ou Fargate.
+Integra nativamente com ECR, ELB, CloudWatch e IAM.
+
+3.12.3 - EKS - Elastic Kubernates Service:
+Execução de aplicações via Kubernetes com gerenciamento simplificado.
+Processos para usar → Criar cluster > Configurar nós (EC2 ou Fargate) > Criar pods com imagens do ECR > Gerenciar usando ferramentas Kubernetes padrão.
+Ideal para quem já usa Kubernetes ou precisa de maior controle e flexibilidade
+
+3.12.4 - AWS Fargate:
+Execução de containers serverless.
+Processos para usar → Escolher ECS ou EKS > Criar tarefa/pod > Definir requisitos de CPU/memória > Fargate gerencia o resto.
+Sem necessidade de provisionar ou gerenciar servidores; pagamento baseado no uso.
+----------------------------------------------------------
+4.0 - Redes em AWS
+
+4.1 - Amazon VPC - Virtual Private Cloud:
+Permite construir e configurar redes virtuais na AWS;
+Sub-redes: privadas e públicas;
+"Tudo começa dentro de um VPC"
+
+4.2- Conectividade com AWS:
+Conexão da VPC com a internet por meio de Internet Gateway:
+Permite que instâncias em sub-redes públicas acessem a internet;
+Necessário configurar rota na tabela de rotas da sub-rede pública apontando para o gateway;
+Instâncias precisam de IP público ou elástico para se comunicarem com a internet.
+
+4.3- Conexão da VPC a sub-redes privadas via Gateway Privado Virtual (VGW):
+Permite criar uma conexão VPN site-to-site entre sua rede local (on-premises) e a VPC;
+Usado para acessar sub-redes privadas de forma segura e criptografada;
+Ideal para ambientes híbridos (parte local, parte na nuvem).
+
+4.4- AWS Direct Connect:
+Conexão física dedicada entre sua rede local e a AWS;
+Oferece menor latência, maior largura de banda e conexão mais estável do que VPN;
+Pode ser usada para acessar uma ou várias VPCs, inclusive em diferentes regiões;
+Ideal para empresas que precisam de alta performance e segurança na comunicação com a nuvem.
+
+Sub-redes e listar de controle de acesso:
+
+4.5 - NACLs - Network ACLs:
+Controle de trafego de entrada e saída de sub-redes;
+Comportamento Stateless > As regras de entrada e saída são independentes (se permitir entrada, precisa permitir saída também);
+Por padrão, permite todo tráfego de entrada e saída (na NACL padrão);
+Se criar uma NACL personalizada, ela nega todo o tráfego por padrão até que você defina regras.
+
+
+4.6 - Grupos de segurança na EC2:
+Controle de tráfego de entrada e saída em nível de instância EC2 (ou ENI);
+Comportamento Stateful > Se uma solicitação de entrada for permitida, a resposta de saída é automaticamente permitida (e vice-versa);
+Por padrão, nega todo o tráfego de entrada e permite todos o tráfego de saída;
+Só permite regras de permissão (não há regras de negação).
+
+----------------------------------------------
+5.0 - Armazenamento de banco de dados na AWS
+
+5.1 - Tipos de Armazendamento:
+5.2 - Armazenamento de Objetos (Object Storage):
+Dados armazenados como objetos (arquivo + metadados + identificador único);
+Ideal para dados não estruturados e de grande volume;
+Escalabilidade praticamente ilimitada;
+Serviço AWS: Amazon S3;
+Casos de uso: Data lakes, mídias (imagens, vídeos), backup e recuperação, logs, arquivos estáticos.
+
+5.3 - Armazenamento de Arquivos (File Storage):
+Sistema de arquivos compartilhado acessado por múltiplas instâncias;
+Permite acesso simultâneo por servidores, aplicações e usuários;
+Analogia com pastas compartilhadas em rede local;
+Serviço AWS: Amazon EFS (Elastic File System)
+Casos de uso: Ambientes de desenvolvimento, diretórios pessoais, aplicações legadas, microsserviços.
+
+5.4 - Armazenamento de Blocos (Block Storage):
+Armazena dados em blocos individuais (como um HDD ou SSD);
+Alta performance de leitura e escrita com baixa latência;
+Serviço AWS: Amazon EBS (Elastic Block Store)
+Casos de uso: Máquinas virtuais (EC2), containers, bancos de dados relacionais, sistemas de arquivos.
+
+5.5 - EBS - Amazon Elastic Block Store:
+Armazenamento de Blocos (Discos físicos) chamados de "volumes";
+Discos anexados fisicamente ao computador host;
+Ideal para dados de armazenamento temporário como buffers, cache, dados de rascunho;
+Serviço AWS: Amazon Elastic Compute Cloud EC2
+
+5.5.1 - Dados serão perdidos se:
+Falha de disco de uma unidade;
+Instância parada;
+Instância hiberna;
+Instância encerrada
+
+5.6 - Processo para Criar um bloco:
+Definir o tipo do volume;
+Escolher o tamanho e suas configurações;
+Anexar volume a uma instância EC2
+
+5.7 - Possíveis volumes:
+5.7.1 - HDD:
+Mais lento;
+Mais barato;
+Disco rígido frio e otimizado para throughput
+
+5.7.2 - SSD:
+Mais rápido;
+Mais caro;
+Volumes SSD de uso geral, IOPS provisionados
+
+5.8 - Backups:
+Snapshots (Salva os dados separando diariamente, mais fácil de conseguir recuperar algo dos dias anteriores);
+Backup Incremental
+
+5.9 - Amazon S3 - Simple Storage Service:
+Serviço de Armazenamento de Objetos;
+É possível controlar acesso por objeto e utilizar versionamento de objetos;
+Casos de uso: Data lakes, Arquivamento de dados e hospedagem de sites estáticos
+
+5.10 - O que é um objeto no S3 ?
+Um objeto é qualquer tipo de arquivo, que é Composto por:
+Dados - Conteúdo que esta sendo armazenado;
+Metadados - Conjunto de pares de nome-valor com o qual é possível armazenar informações relacionadas ao objeto;
+Chave - Nome que você atribuiu ao objeto. Usado para recuperar o mesmo.
+
+5.11 - Onde esta localizado o meu objeto no S3 ?
+O seu objeto esta localizado em um bucket no S3, ja o seu arquivo esta armazenado no HD
+
+5.12 - Buckets S3
+Antes de um upload do seus objetos, é preciso criar um bucket;
+É um container para objetos armazenados no S3;
+Pode armazenar qualquer número de objetos em um bucket;
+Objetos podem ter de 0 até 5 TB de tamanho;
+Pode ter até 100 buckets na sua conta
+
+5.13 - Classes de Armazenamento:
+5.13.1 - S3 Standard:
+Projetado para dados acessados com frequência;
+Armazena dados em um mínimo de três Zonas de Disponibilidade;
+Boa escolha para diversos casos de uso como sites, distribuição de conteúdo e análise de dados;
+Custo mais alto
+
+5.13.2 - S3 Standard-Infrequent Access (S3 Stander-IA):
+Semelhante ao S3 Standard;
+Armazena dados em um mínimo de três Zonas de Disponibilidade;
+Ideal para dados acessados com pouca frequência;
+Taxa por GB de armazenamento e recuperação mais baixo
+
+5.13.3 - S3 One Zone-Infrequent Access (S3 One Zone - IA):
+Tem um preço menor do que o S3 Standard - IA;
+Armazena dados em uma única Zona de Disponibilidade;
+Cenários: Economizar custos com armazenamento e pode reduzir facilmente seus dados em caso de falha na Zona de Disponibilidade
+
+5.13.4 - S3 Intelligent-Tiering:
+Ideal para dados com padrões de acesso desconhecidos ou em alteração;
+Gerencia automaticamente o ciclo de vida dos objetos armazenados otimizando custos;
+Requer uma pequena taxa mensal de monitoramento e automação por objeto
+
+5.13.5 - S3 Glacier Instant Retrieval:
+Ideal para dados de longa duração, raramente acessados mas que exigem recuperação rápida (ms);
+Oferece acesso tão rápido quanto Standard e Standard - IA;
+Ideal para dados acessados uma vez por trimestre
+
+5.13.6 - S3 Glacier Flexible Retrieval:
+Para dados que não requerem acesso imediato;
+Ideal para casos de uso de backups não urgentes, recuperação de desastres;
+É possível escolher a velocidade de recuperação;
+Ideal para dados acessados 1 ou 2 vezes por ano
+
+5.13.7 - S3 Glacier Deep Archive:
+Suporte a retenção e preservação digital de longo prazo para dados que podem ser acessados 1 ou 2 vezes por ano;
+Ideal para empresas que precisam manter dados por conformidades legais por 7 a 10 anos;
+Recuperação de dados em até 12 horas
+
+5.14 - EFS - Amazon Elastic File System:
+Fornece um sistema de arquivos;
+Servless e totalmente elástico;
+Escala até Petabytes;
+Aumenta e diminui conforma adição e remoção de arquivos;
+Compatível com protocolo NFS (Network file System);
+Acesso simultâneo aos mesmos dados sem problemas de performance;
+Serviços: EC2, Lambda e ECS
+
+5.14.1 -Classes de Armazenamento:
+Padrão (Instancia regional): Standard e Standard - IA (Infrequent Access);
+Uma AZ: One Zone e One Zone - IA (Infrequent Access)
