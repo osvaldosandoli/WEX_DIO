@@ -29,6 +29,10 @@ A implementação de ferramentas na empresa Abstergo Industries teve como princi
 
 Anexos
 - Relatório de economia gerada com Savings Plans
+  ![image](https://github.com/user-attachments/assets/c690f88d-e40e-4df8-a0bb-39b73b9f0f3e)
+
 - Planilha comparativa de custos S3 antes e depois da migração para Intelligent-Tiering
+  ![image](https://github.com/user-attachments/assets/2c863e14-6d86-4758-b388-ca49a7369e10)
+
 Assinatura do Responsável pelo Projeto:
-Osvaldo Silva
+Osvaldo Sandoli
