@@ -210,3 +210,86 @@ Controle de tráfego em nível de instância EC2 (stateful).
 - **Standard**: Alta disponibilidade em região inteira
 - **Standard-IA**: Reduz custo para dados acessados com menos frequência
 - **One Zone** e **One Zone-IA**: Versões com menor custo armazenadas em uma única AZ
+
+### 5.15 Amazon RDS - Relational Database Service
+- Serviço gerenciado de banco de dados relacional (RDBMS)
+- Utiliza **SQL** como linguagem de consulta
+
+#### 5.15.1 Principais Funcionalidades
+- Provisionamento automático de hardware
+- Aplicação de patches
+- Backups automáticos
+- Alta disponibilidade (redundância, failover e recuperação de desastres)
+
+#### 5.15.2 Compatibilidade
+- MySQL
+- PostgreSQL
+- MariaDB
+- Oracle
+- SQL Server
+
+---
+
+### 5.16 Amazon Aurora
+- Banco de dados relacional **serverless**
+- Compatível com PostgreSQL e MySQL
+- Custo reduzido (até 1/10 do preço de outros provedores)
+- Replicação multi-regional
+- Até 15 réplicas de leitura
+- Backup contínuo via S3
+
+---
+
+### 5.17 Amazon DynamoDB
+- Banco de dados **NoSQL** totalmente gerenciado
+- **Serverless**, performance < 10 ms
+- Escalabilidade automática e replicação regional
+- Ideal para grandes volumes de dados com baixa latência
+
+#### 5.17.1 Conceitos
+- **Tabela**: Conjunto de dados
+- **Item**: Registro ou entidade
+- **Atributo**: Campo dentro do item
+
+---
+
+### 5.18 Amazon DocumentDB
+- Banco de dados de documentos
+- Otimizado para **conteúdo gerenciado** como catálogos e perfis
+- Compatível com cargas de trabalho MongoDB
+
+---
+
+### 5.19 Amazon Neptune
+- Banco de dados de **grafos**
+- Aplicações: redes sociais, recomendações, detecção de fraude
+
+---
+
+### 5.20 Amazon QLDB
+- Banco de dados **ledger** imutável e criptograficamente verificável
+- Ideal para históricos, registros, e transações auditáveis
+
+---
+
+### 5.21 Amazon DynamoDB Accelerator (DAX)
+- Camada de **cache nativa** para DynamoDB
+- Reduz ainda mais o tempo de leitura
+
+---
+
+### 5.22 Amazon ElastiCache
+- Serviço de cache em memória
+- Compatível com **Redis** e **Memcached**
+- Reduz latência e melhora desempenho de bancos de dados
+
+---
+
+### 5.23 Amazon Redshift
+- **Data warehouse** totalmente gerenciado para análise de Big Data
+- Integra múltiplas fontes de dados
+- Permite rodar comandos SQL com **Redshift Spectrum**
+- Ideal para projeção de tendências e relações entre dados
+
+---
+
