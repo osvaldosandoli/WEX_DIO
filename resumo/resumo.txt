@@ -291,3 +291,74 @@ Serviços: EC2, Lambda e ECS
 5.14.1 -Classes de Armazenamento:
 Padrão (Instancia regional): Standard e Standard - IA (Infrequent Access);
 Uma AZ: One Zone e One Zone - IA (Infrequent Access)
+
+5.15 - RDS - Amazon Relational Database Service
+Relação de dados;
+Facilita a compreensão das informações;
+SQL como linguagem de consulta;
+RDBMS (Sistema de gerenciamento de banco de dados)
+
+5.15.1 - Atividades:
+Facilita configuração e provisionamento de hardware;
+Patches automatizados;
+Backups;
+Redundância;
+Failover e Recuperação de Desastres
+
+5.15.2 - Compatibilidades:
+MySQL;
+PostgreDB;
+MariaDB;
+Oracle;
+SQL SERVER
+
+5.16 - Amazon Aurora:
+Servless;
+Compatível com: PostgreSQL e MySQL;
+Preço 1/10 de outros vendors;
+Replicação multi-regional;
+Até 15 replicas de leitura;
+Backups contínuo via S3
+
+5.17 - DynamoDB
+Banco de dados não relacional (NoSQL);
+Servless;
+Performance abaixo de 10ms;
+Escala automaticamente;
+Replicação de dados regional;
+Caso de uso: Muitos dados, baixa latência
+
+5.17.1 - Atributos:
+Tabelas > Coleção de dados;
+Item > Grupo de atributos identificável;
+Atributo > Dados existentes dentro de cada item
+
+5.18 - Amazon DocumentDB:
+Banco de dados de documentos;
+Gerenciamento de conteúdo;
+Catálogos, perfis de usuário;
+Compatível com cargas de trabalho MongoDB
+
+5.19 - Amazon Neptune:
+Redes sociais, mecanismos de recomendação, detecção de fraude e gráficos de conhecimento;
+Banco de dados de grafos
+
+5.20 - Amazon QLDB:
+Quantum Ledger Database;
+Banco de dados serviço ledger;
+Imutabilidade;
+Indicado para históricos, registros digitais, transações financeiras
+
+5.21 - Amazon DynamoDB Accelerator:
+Chamado de DAX;
+Camada de cache nativa para otimizar tempo de leitura de dados
+
+5.22 - Amazon Elasticache:
+Camada de cache sobre bancos de dados;
+Compatível com Redis e Memcached
+
+5.23 - Amazon Readshift:
+Serviço de Data warehouse para análise de Big Data;
+Oferece coletar informações de muitas fontes de dados;
+Projeta relações e tendencias de dados;
+Usando Redshift Spectrum é possível rodar comando SQL em cima de todas as fontes de dados agrupadas
